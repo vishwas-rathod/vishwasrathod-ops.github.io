@@ -36,12 +36,35 @@
     a:hover {
       text-decoration: underline;
     }
+    footer {
+      background-color: #1e293b;
+      padding: 1rem;
+      margin-top: 2rem;
+    }
+
+    /* Typing effect */
+    .typing {
+      border-right: 2px solid #38bdf8;
+      white-space: nowrap;
+      overflow: hidden;
+      display: inline-block;
+      animation: typing 4s steps(30, end), blink 0.75s step-end infinite;
+    }
+
+    @keyframes typing {
+      from { width: 0 }
+      to { width: 100% }
+    }
+
+    @keyframes blink {
+      50% { border-color: transparent }
+    }
   </style>
 </head>
 <body>
   <header>
     <h1>Vishwas Rathod</h1>
-    <p>Operations | Automation | Analytics</p>
+    <p class="typing">Operations | Automation | Analytics</p>
   </header>
 
   <section>
