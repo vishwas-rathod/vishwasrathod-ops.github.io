@@ -7,8 +7,8 @@
   <style>
     body {
       font-family: 'Segoe UI', sans-serif;
-      background-color: #0f172a;
-      color: #f8fafc;
+      background-color: #0f172a; /* Dark background */
+      color: #f8fafc; /* Light text */
       margin: 0;
       padding: 0;
       text-align: center;
@@ -48,16 +48,41 @@
       white-space: nowrap;
       overflow: hidden;
       display: inline-block;
-      animation: typing 20s steps(30, end), blink 0.75s step-end infinite;
+      animation: typing 8s steps(30, end), blink 0.75s step-end infinite;
     }
-
     @keyframes typing {
       from { width: 0 }
       to { width: 100% }
     }
-
     @keyframes blink {
       50% { border-color: transparent }
+    }
+
+    /* Contact form styling */
+    form {
+      max-width: 400px;
+      margin: auto;
+      text-align: left;
+    }
+    input, textarea {
+      background-color: #1e293b;
+      color: #f8fafc;
+      border: 1px solid #38bdf8;
+      border-radius: 5px;
+      width: 100%;
+      padding: 8px;
+      margin: 8px 0;
+    }
+    button {
+      background-color: #38bdf8;
+      color: #fff;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #0ea5e9;
     }
   </style>
 </head>
@@ -75,6 +100,22 @@
   <section>
     <h2>Projects</h2>
     <p>Explore my work on <a href="https://github.com/vishwasrathod-ops">GitHub</a> and connect for collaboration.</p>
+  </section>
+
+  <section>
+    <h2>Contact Me</h2>
+    <form action="https://formspree.io/f/mnpqnkql" method="POST">
+      <label for="name">Name:</label><br>
+      <input type="text" id="name" name="name" required><br>
+
+      <label for="email">Email:</label><br>
+      <input type="email" id="email" name="email" required><br>
+
+      <label for="message">Message:</label><br>
+      <textarea id="message" name="message" rows="5" required></textarea><br>
+
+      <button type="submit">Send Message</button>
+    </form>
   </section>
 
   <footer>
