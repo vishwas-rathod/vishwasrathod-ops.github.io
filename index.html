@@ -26,22 +26,8 @@ h1 {
 }
 
 .typing {
-    font-size: 1.2rem;
     color: #38bdf8;
-    border-right: 2px solid #38bdf8;
-    white-space: nowrap;
-    overflow: hidden;
-    display: inline-block;
-    animation: typing 6s steps(30, end), blink .75s step-end infinite;
-}
-
-@keyframes typing {
-    from { width: 0; }
-    to { width: 100%; }
-}
-
-@keyframes blink {
-    50% { border-color: transparent; }
+    font-size: 1.2rem;
 }
 
 section {
@@ -55,48 +41,36 @@ h2 {
 }
 
 p {
-    line-height: 1.7;
     color: #cbd5e1;
-}
-
-a {
-    color: #38bdf8;
-    text-decoration: none;
-}
-
-a:hover {
-    text-decoration: underline;
+    line-height: 1.7;
 }
 
 .cv-btn {
     display: inline-block;
-    margin-top: 15px;
     padding: 12px 24px;
-    background-color: #38bdf8;
+    background: #38bdf8;
     color: white;
-    border-radius: 6px;
     text-decoration: none;
+    border-radius: 6px;
     font-weight: bold;
 }
 
 .cv-btn:hover {
-    background-color: #0ea5e9;
-    text-decoration: none;
+    background: #0ea5e9;
 }
 
 .skills {
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;
+    flex-wrap: wrap;
     gap: 10px;
-    margin-top: 15px;
 }
 
 .skill {
-    background: #1e293b;
     padding: 10px 15px;
-    border-radius: 20px;
     border: 1px solid #38bdf8;
+    border-radius: 20px;
+    background: #1e293b;
 }
 
 form {
@@ -109,7 +83,6 @@ input,
 textarea {
     width: 100%;
     padding: 10px;
-    margin-top: 5px;
     margin-bottom: 15px;
     border-radius: 5px;
     border: 1px solid #38bdf8;
@@ -118,7 +91,7 @@ textarea {
 }
 
 button {
-    background-color: #38bdf8;
+    background: #38bdf8;
     color: white;
     border: none;
     padding: 12px 20px;
@@ -127,18 +100,13 @@ button {
 }
 
 button:hover {
-    background-color: #0ea5e9;
+    background: #0ea5e9;
 }
 
 footer {
-    background-color: #1e293b;
+    background: #1e293b;
     padding: 1rem;
-    margin-top: 3rem;
-}
-
-.social-links a {
-    margin: 0 10px;
-    font-weight: bold;
+    margin-top: 2rem;
 }
 </style>
 </head>
@@ -152,25 +120,19 @@ footer {
 
 <section>
     <h2>About Me</h2>
-
     <p>
         Driven professional with expertise in process optimization,
         support operations, automation, and data analytics.
-        Passionate about building efficient workflows, improving customer
-        experiences, and creating impactful dashboards that drive
-        business decisions.
+        Passionate about building efficient workflows and insightful dashboards.
     </p>
 </section>
 
 <section>
     <h2>Resume</h2>
-
-    <p>
-        Download my latest CV below.
-    </p>
+    <p>Download my latest CV below.</p>
 
     CV_Vishwas_Rathod.pdf
-       📄 Download CV
+        📄 Download CV
     </a>
 </section>
 
@@ -182,8 +144,6 @@ footer {
         <div class="skill">Automation</div>
         <div class="skill">Power BI</div>
         <div class="skill">Excel</div>
-        <div class="skill">SQL</div>
-        <div class="skill">Python</div>
         <div class="skill">Data Analytics</div>
         <div class="skill">Process Improvement</div>
     </div>
@@ -193,21 +153,11 @@ footer {
     <h2>Projects</h2>
 
     <p>
-        Explore my projects and work samples on
+        Explore my work on
         <a href="https://github.com/vishwasrathod-ops" target="_blank">
             GitHub
         </a>.
     </p>
-</section>
-
-<section>
-    <h2>Connect With Me</h2>
-
-    <div class="social-links">
-        <a href="https://github.com/vishwasrathod-ops" target="_blank">
-            GitHub
-        </a>
-    </div>
 </section>
 
 <section>
@@ -218,7 +168,7 @@ footer {
         <label>Name</label>
         <input type="text" name="name" required>
 
-        <label>Phone Number (Optional)</label>
+        <label>Phone</label>
         <input type="tel" name="phone">
 
         <label>Email</label>
@@ -233,4 +183,8 @@ footer {
 </section>
 
 <footer>
-    <p>© 2026 Vishwas Rathod | Built
+    <p>© 2026 Vishwas Rathod | Built with GitHub Pages</p>
+</footer>
+
+</body>
+</html>
