@@ -1,256 +1,322 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Vishwas Rathod | Portfolio</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vishwas Rathod | Portfolio</title>
 
-  <style>
-    :root {
-      --bg: #0f172a;
-      --panel: #1e293b;
-      --panel-alt: #111827;
-      --text: #f8fafc;
-      --muted: #cbd5e1;
-      --accent: #38bdf8;
-      --accent-dark: #0ea5e9;
-      --border: rgba(56, 189, 248, 0.5);
-    }
+<style>
+:root {
+  --bg: #0f172a;
+  --panel: #1e293b;
+  --text: #f8fafc;
+  --muted: #cbd5e1;
+  --accent: #38bdf8;
+  --accent-dark: #0ea5e9;
+}
 
-    * {
-      box-sizing: border-box;
-    }
+* {
+  box-sizing: border-box;
+}
 
-    html {
-      scroll-behavior: smooth;
-    }
+html {
+  scroll-behavior: smooth;
+}
 
-    body {
-      margin: 0;
-      font-family: "Segoe UI", sans-serif;
-      background: var(--bg);
-      color: var(--text);
-      line-height: 1.6;
-      text-align: center;
-    }
+body {
+  margin: 0;
+  font-family: "Segoe UI", sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  text-align: center;
+  line-height: 1.6;
+}
 
-    a {
-      color: var(--accent);
-      text-decoration: none;
-    }
+header {
+  background: var(--panel);
+  padding: 50px 20px;
+}
 
-    a:hover {
-      text-decoration: underline;
-    }
+.profile-pic {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid var(--accent);
+  margin-bottom: 20px;
+}
 
-    header {
-      background: var(--panel);
-      padding: 4rem 1rem 3rem;
-    }
+h1 {
+  margin: 0;
+  font-size: 3rem;
+}
 
-    h1 {
-      margin: 0;
-      font-size: clamp(2.4rem, 5vw, 3.5rem);
-    }
+.typing {
+  color: var(--accent);
+  font-size: 1.2rem;
+  font-weight: 600;
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 3px solid var(--accent);
+  width: 0;
+  margin: 10px auto 0;
+  animation: typing 4s steps(30, end) infinite,
+             blink 0.8s infinite;
+}
 
-    .typing {
-      margin-top: 0.75rem;
-      font-size: 1.2rem;
-      color: var(--accent);
-      font-weight: 600;
-    }
+@keyframes typing {
+  0% {
+    width: 0;
+  }
+  40% {
+    width: 330px;
+  }
+  60% {
+    width: 330px;
+  }
+  100% {
+    width: 0;
+  }
+}
 
-    main {
-      max-width: 980px;
-      margin: 0 auto;
-      padding: 2rem 1rem 4rem;
-    }
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
 
-    section {
-      margin: 2rem 0;
-      padding: 2rem 1.5rem;
-      background: rgba(30, 41, 59, 0.35);
-      border: 1px solid rgba(148, 163, 184, 0.15);
-      border-radius: 16px;
-    }
+main {
+  max-width: 900px;
+  margin: auto;
+  padding: 20px;
+}
 
-    h2 {
-      margin-top: 0;
-      margin-bottom: 1rem;
-      color: var(--accent);
-      font-size: 2rem;
-    }
+section {
+  background: rgba(30, 41, 59, 0.4);
+  padding: 30px;
+  margin: 20px 0;
+  border-radius: 15px;
+}
 
-    p {
-      color: var(--muted);
-      margin: 0.5rem 0;
-    }
+h2 {
+  color: var(--accent);
+}
 
-    .cv-btn {
-      display: inline-block;
-      margin-top: 1rem;
-      padding: 12px 24px;
-      background: var(--accent);
-      color: #fff;
-      border-radius: 8px;
-      font-weight: 700;
-      transition: background 0.2s ease;
-    }
+p {
+  color: var(--muted);
+}
 
-    .cv-btn:hover {
-      background: var(--accent-dark);
-      text-decoration: none;
-    }
+.btn {
+  display: inline-block;
+  margin: 10px;
+  padding: 12px 22px;
+  background: var(--accent);
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: 0.3s;
+}
 
-    .skills {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 12px;
-      margin-top: 1rem;
-    }
+.btn:hover {
+  background: var(--accent-dark);
+  text-decoration: none;
+}
 
-    .skill {
-      padding: 10px 16px;
-      border: 1px solid var(--border);
-      background: var(--panel);
-      border-radius: 999px;
-      color: var(--text);
-      font-size: 0.95rem;
-    }
+.skills-list {
+  text-align: left;
+  max-width: 800px;
+  margin: auto;
+}
 
-    form {
-      max-width: 560px;
-      margin: 1rem auto 0;
-      text-align: left;
-    }
+.skills-list p {
+  color: var(--muted);
+  margin-bottom: 20px;
+}
 
-    label {
-      display: block;
-      margin-bottom: 0.5rem;
-      color: var(--text);
-      font-weight: 600;
-    }
+.skills-list strong {
+  color: var(--accent);
+}
 
-    input,
-    textarea {
-      width: 100%;
-      padding: 12px 14px;
-      margin-bottom: 1rem;
-      border: 1px solid var(--border);
-      border-radius: 8px;
-      background: var(--panel-alt);
-      color: var(--text);
-      font: inherit;
-    }
+form {
+  max-width: 500px;
+  margin: auto;
+  text-align: left;
+}
 
-    textarea {
-      resize: vertical;
-      min-height: 120px;
-    }
+input,
+textarea {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border-radius: 6px;
+  border: 1px solid var(--accent);
+  background: #111827;
+  color: white;
+}
 
-    button {
-      background: var(--accent);
-      color: white;
-      border: none;
-      border-radius: 8px;
-      padding: 12px 20px;
-      font: inherit;
-      font-weight: 700;
-      cursor: pointer;
-      transition: background 0.2s ease;
-    }
+button {
+  padding: 12px 20px;
+  background: var(--accent);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
 
-    button:hover {
-      background: var(--accent-dark);
-    }
+button:hover {
+  background: var(--accent-dark);
+}
 
-    footer {
-      background: var(--panel);
-      padding: 1.5rem 1rem;
-      color: var(--muted);
-    }
+footer {
+  background: var(--panel);
+  padding: 20px;
+  margin-top: 30px;
+  color: var(--muted);
+}
 
-    @media (max-width: 600px) {
-      section {
-        padding: 1.5rem 1rem;
-      }
+@media (max-width: 600px) {
+  .typing {
+    font-size: 1rem;
+  }
 
-      h2 {
-        font-size: 1.6rem;
-      }
-    }
-  </style>
+  h1 {
+    font-size: 2.2rem;
+  }
+
+  section {
+    padding: 20px;
+  }
+}
+</style>
 </head>
 
 <body>
-  <header>
-    <h1>Vishwas Rathod</h1>
-    <p class="typing">Operations | Automation | Analytics</p>
-  </header>
 
-  <main>
-    <section>
-      <h2>About Me</h2>
-      <p>
-        Driven professional with expertise in process optimization, support operations,
-        automation, and data analytics. Passionate about building efficient workflows
-        and insightful dashboards.
-      </p>
-    </section>
+<header>
 
-    <section>
-      <h2>Resume</h2>
-      <p>Download my latest CV below.</p>
-      <a class="cv-btn" href="CV_Vishwas_Rathod.pdf" download>
-        📄 Download CV
-      </a>
-    </section>
+  <img src="Vishwas.jpg" alt="Vishwas Rathod" class="profile-pic">
 
-    <section>
-      <h2>Skills</h2>
-      <div class="skills">
-        <div class="skill">Operations</div>
-        <div class="skill">Automation</div>
-        <div class="skill">Power BI</div>
-        <div class="skill">Excel</div>
-        <div class="skill">Data Analytics</div>
-        <div class="skill">Process Improvement</div>
-      </div>
-    </section>
+  <h1>Vishwas Rathod</h1>
 
-    <section>
-      <h2>Projects</h2>
-      <p>
-        Explore my work on
-        <a href="https://github.com/vishwasrathod-ops" target="_blank" rel="noopener noreferrer">
-          GitHub
-        </a>.
-      </p>
-    </section>
+  <p class="typing">
+    Operations | Automation | Analytics
+  </p>
 
-    <section>
-      <h2>Contact Me</h2>
-      <form action="https://formspree.io/f/mnpqnkql" method="POST">
-        <label for="name">Name</label>
-        <input id="name" type="text" name="name" required />
+</header>
 
-        <label for="email">Email</label>
-        <input id="email" type="email" name="email" required />
+<main>
 
-        <label for="phone">Phone</label>
-        <input id="phone" type="tel" name="phone" />
+<section>
+  <h2>About Me</h2>
 
-        <label for="message">Message</label>
-        <textarea id="message" name="message" rows="5" required></textarea>
+  <p>
+    Driven professional with expertise in process optimization,
+    support operations, automation, and data analytics.
+    Passionate about building efficient workflows and insightful dashboards.
+  </p>
+</section>
 
-        <button type="submit">Send Message</button>
-      </form>
-    </section>
-  </main>
+<section>
+  <h2>Resume & Profile</h2>
 
-  <footer>
-    <p>© 2026 Vishwas Rathod | Built with ❤️ GitHub Pages</p>
-  </footer>
+  CV_Vishwas_Rathod.pdf
+     📄 Download CV
+  </a>
+
+  <br><br>
+
+  <a href="https://www.linkedin.com/in/vishwas-rathod-b93409204"
+     class="btn"
+     target="_blank">
+     🔗 LinkedIn Profile
+  </a>
+
+</section>
+
+<section>
+  <h2>Skills</h2>
+
+  <div class="skills-list">
+
+    <p>
+      <strong>Business Operations:</strong>
+      Order Management · Contract Management · Project Coordination ·
+      PMO Support · Stakeholder Management · Process Improvement
+    </p>
+
+    <p>
+      <strong>Systems & Tools:</strong>
+      SAP ERP · Salesforce CRM · Microsoft Excel ·
+      SharePoint Online · Microsoft Forms
+    </p>
+
+    <p>
+      <strong>Automation & Analytics:</strong>
+      Power Automate · Power Apps · Power BI · KPI Reporting ·
+      Dashboard Development · Workflow Automation · QA Auditing ·
+      Data Analysis
+    </p>
+
+  </div>
+</section>
+
+<section>
+  <h2>Projects</h2>
+
+  <p>
+    Explore my work on GitHub:
+  </p>
+
+  <a href="https://github.com/vishwasrathod-ops"
+     class="btn"
+     target="_blank">
+     GitHub Projects
+  </a>
+
+</section>
+
+<section>
+  <h2>Contact Me</h2>
+
+  <form action="https://formspree.io/f/mnpqnkql" method="POST">
+
+    <input
+      type="text"
+      name="name"
+      placeholder="Your Name"
+      required>
+
+    <input
+      type="email"
+      name="email"
+      placeholder="Your Email"
+      required>
+
+    <input
+      type="tel"
+      name="phone"
+      placeholder="Phone Number">
+
+    <textarea
+      name="message"
+      rows="5"
+      placeholder="Your Message"
+      required></textarea>
+
+    <button type="submit">
+      Send Message
+    </button>
+
+  </form>
+
+</section>
+
+</main>
+
+<footer>
+  © 2026 Vishwas Rathod | Built with ❤️ GitHub Pages
+</footer>
+
 </body>
 </html>
